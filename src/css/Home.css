@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+
+.box-service-hit
+{
+    height: 444px;
+    background-color: #2E67F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.font-service-hit
+{
+    font-family: 'Mitr' ,sans-serif;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 0.08em;
+    margin-top: 20px;
+}
+.box-card-hit
+{
+    display: flex;
+    flex-direction: row;
+}
+footer
+{
+    height: 4vw;
+}

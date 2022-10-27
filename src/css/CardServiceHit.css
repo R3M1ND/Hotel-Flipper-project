@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+
+.box-card
+{
+    border-radius: 10px;
+    width: 230px;
+    height: 300px;
+    margin-top: 15px;
+    margin-right: 70px;
+    padding: 0px;
+    border: 0px;
+
+}
+.card-img
+{
+    height: 85% !important;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+    border: none;
+    padding: 0px ;
+}
+
+
+.card-body
+{
+    padding: 10px 5px 5px 10px;
+
+}
+.card-text
+{
+    font-family: 'Mitr' , sans-serif;
+    color: #464555;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    margin-left: 15px;
+}
+.card-link
+{
+    text-decoration: none;
+}
+.box-card:hover
+{
+    transform: scale(1.01);
+}
