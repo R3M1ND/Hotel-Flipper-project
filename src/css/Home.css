@@ -22,7 +22,46 @@
     display: flex;
     flex-direction: row;
 }
+.font-service-covid
+{
+    font-family: 'Mitr' ,sans-serif;
+    color: #464555;
+    font-size: 22px;
+    margin-bottom: 10px;
+    
+}
+.box-service-covid
+{
+    margin-top: 30px;
+    margin-left: 60px;
+}
+.box-card-covid
+{
+    display: flex;
+    margin-right: 20px;
+
+}
+.font-service-maintain
+{
+    font-family: 'Mitr' ,sans-serif;
+    color: #464555;
+    font-size: 22px;
+    margin-bottom: 10px;
+    
+}
+.box-service-maintain
+{
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.box-card-maintain
+{
+    display: flex;
+    margin-right: 20px;
+
+}
+
 footer
 {
-    height: 4vw;
+    height: 16vw;
 }
