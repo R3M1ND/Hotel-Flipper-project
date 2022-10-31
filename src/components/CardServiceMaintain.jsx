@@ -10,13 +10,13 @@ const CardServiceMaintain = (props) => {
             <Col>
                 <Card className="box-card-covid">
                     <Card.Link  href={props.to} className = "card-link-covid" >
-                        <Card.Img variant="top" src={props.imgMaintain} className="card-img-covid" />
+                        <Card.Img variant="top" src={props.maintain.img} className="card-img-covid" />
                         <Card.Body className="card-body-covid">
                             <Card.Title className="card-text-covid">
-                                {props.text}
+                                {props.maintain.text}
                             </Card.Title>
                             <Card.Text className="card-text-describe-covid">
-                                เริ่มต้น {props.describe} บาท
+                                เริ่มต้น {props.maintain.describe} บาท
                             </Card.Text>
                         </Card.Body>
                     </Card.Link>

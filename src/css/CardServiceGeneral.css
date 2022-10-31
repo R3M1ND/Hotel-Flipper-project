@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+
+
+.box-card-general
+{
+    border-radius: 0px;
+    width: 322px;
+    height: 230px;
+    margin-top: 0px;
+    /* margin-right: 30px; */
+    padding: 0px;
+    border: 0px;
+    background-color:  transparent;
+
+}
+.card-img-general
+{
+    height: 162px ;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    
+}
+.card-body-general
+{
+    padding: 10px 0px 0px 0px;
+
+}
+.card-text-general
+{
+    font-family: 'Mitr' , sans-serif;
+    color: #2E67F8;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    margin-left: 0px;
+    margin-bottom: 3px;
+}
+.card-text-describe-general
+{
+    font-family: 'Mitr' ,sans-serif;
+    color: #464555;
+    font-size: 18px;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.card-link-general
+{
+    text-decoration: none;
+}
+.card-link-general:hover
+{
+    transform: translateY(2px)
+}

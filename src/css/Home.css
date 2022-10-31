@@ -41,6 +41,25 @@
     margin-right: 20px;
 
 }
+.font-service-general
+{
+    font-family: 'Mitr' ,sans-serif;
+    color: #464555;
+    font-size: 22px;
+    margin-bottom: 10px;
+    
+}
+.box-service-general
+{
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.box-card-general
+{
+    display: flex;
+    margin-right: 20px;
+
+}
 .font-service-maintain
 {
     font-family: 'Mitr' ,sans-serif;
@@ -55,6 +74,42 @@
     margin-left: 60px;
 }
 .box-card-maintain
+{
+    display: flex;
+    margin-right: 20px;
+}
+.font-service-dust
+{
+    font-family: 'Mitr' ,sans-serif;
+    color: #464555;
+    font-size: 22px;
+    margin-bottom: 10px;
+    
+}
+.box-service-dust
+{
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.box-card-dust
+{
+    display: flex;
+    margin-right: 20px;
+}
+.font-service-secure
+{
+    font-family: 'Mitr' ,sans-serif;
+    color: #464555;
+    font-size: 22px;
+    margin-bottom: 10px;
+    
+}
+.box-service-secure
+{
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.box-card-secure
 {
     display: flex;
     margin-right: 20px;
