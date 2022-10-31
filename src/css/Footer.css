@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;500&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+
+.box-footer
+{
+    background-color: #2E67F8;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px ;
+    justify-content: space-between;
+
+}
+.box-left
+{
+    margin-left: 80px;
+    color: white;
+    font-family: 'Mitr' ,sans-serif;
+}
+.box-right
+{
+    margin-right: 80px;
+    color: white;
+    font-family: 'Mitr' ,sans-serif;
+
+}
+.font-footer-title
+{
+    font-size: 36px;
+}
+.font-footer-text
+{
+    font-size: 20px;
+    letter-spacing: 0.03em;
+}
+.font-footer-contact
+{
+    font-size: 24px;
+}
+.facebook-font
+{
+    display: flex;
+    font-size: 20px;
+}
+.line-font
+{
+    display: flex;
+    font-size: 20px;
+}
+.mail-font
+{
+    display: flex;
+    font-size: 20px;
+}
+.tel-font
+{
+    display: flex;
+    font-size: 20px;
+}

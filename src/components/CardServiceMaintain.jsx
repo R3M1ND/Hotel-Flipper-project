@@ -8,14 +8,14 @@ const CardServiceMaintain = (props) => {
     return (
         <Row >
             <Col>
-                <Card className="box-card-covid">
-                    <Card.Link  href={props.to} className = "card-link-covid" >
-                        <Card.Img variant="top" src={props.maintain.img} className="card-img-covid" />
-                        <Card.Body className="card-body-covid">
-                            <Card.Title className="card-text-covid">
+                <Card className="box-card-maintain">
+                    <Card.Link  href={props.to} className = "card-link-maintain" >
+                        <Card.Img variant="top" src={props.maintain.img} className="card-img-maintain" />
+                        <Card.Body className="card-body-maintain">
+                            <Card.Title className="card-text-maintain">
                                 {props.maintain.text}
                             </Card.Title>
-                            <Card.Text className="card-text-describe-covid">
+                            <Card.Text className="card-text-describe-maintain">
                                 เริ่มต้น {props.maintain.describe} บาท
                             </Card.Text>
                         </Card.Body>

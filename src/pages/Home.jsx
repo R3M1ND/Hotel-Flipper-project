@@ -8,6 +8,8 @@ import CardServiceMaintain from "../components/CardServiceMaintain";
 import CardServiceSecure from "../components/CardServiceSecure";
 import CardServiceGeneral from "../components/CardServiceGeneral";
 import CardServiceDust from "../components/CardServiceDust";
+import EmployeeBox from "../components/EmployeeBox";
+import Footer from "../components/Footer";
 import imgService1 from "../pic/homekeepper.jpg";
 import imgService2 from "../pic/secure.jpg";
 import imgService3 from "../pic/air.jpg";
@@ -171,7 +173,8 @@ const Home = () => {
                 </div>
             </div>
 
-            <footer></footer>
+            <EmployeeBox />
+            <Footer />
         </div>
     )
 }

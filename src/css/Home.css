@@ -118,5 +118,7 @@
 
 footer
 {
-    height: 16vw;
+    background-color: #2E67F8;
+    height: 400px;
+    width: 100%;
 }

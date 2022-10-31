@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;500&display=swap');
+
+
+.box-bg
+{
+    background-color: yellowgreen;
+    width: 100%;
+    height: 450px;
+    background-image: url('/public/employee.png');
+    background-size: cover;
+    margin-top: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-employee-register
+{
+    width: 910px;
+    height: 320px;
+    background-color: rgba(46, 103, 248, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.font-employee-title
+{
+    font-family: 'Mitr' , sans-serif;
+    color: white;
+    font-size: 48px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+}
+.font-employee-text
+{
+    font-family: 'Mitr' , sans-serif;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    margin-top: 15px;
+}
+.btn-employee-register
+{
+    width: 179px;
+    height: 56px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    color: #2E67F8;
+    font-family: 'Mitr' , sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    margin-top: 40px;
+}
+.btn-employee-register:hover
+{
+    background-color: #2E67F8;
+    color: #FFFFFF;
+}
+.btn-employee-register:active
+{
+    background-color: #2157DE;
+    color: #FFFFFF;
+    transform: translateY(1.0px);
+}
