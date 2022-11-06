@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
 
+body
+{
+    background-color: #F8F8F8;
+}
 .box-service-hit
 {
     height: 444px;
@@ -116,9 +120,3 @@
 
 }
 
-footer
-{
-    background-color: #2E67F8;
-    height: 400px;
-    width: 100%;
-}

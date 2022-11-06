@@ -1,4 +1,6 @@
 import React from "react"
+
+
 import Header from "../components/Header";
 import NavbarHotel from "../components/Navbar";
 import "../css/Home.css";
@@ -9,6 +11,7 @@ import CardServiceSecure from "../components/CardServiceSecure";
 import CardServiceGeneral from "../components/CardServiceGeneral";
 import CardServiceDust from "../components/CardServiceDust";
 import EmployeeBox from "../components/EmployeeBox";
+import StickyCart from "../components/StickyCart";
 import Footer from "../components/Footer";
 import imgService1 from "../pic/homekeepper.jpg";
 import imgService2 from "../pic/secure.jpg";
@@ -119,7 +122,9 @@ let SecureService = Service.secureCard.map(secure => {
 const Home = () => {
     return (
         <div>
+            
             <NavbarHotel />
+            <StickyCart />
             <Header />
             <div className="box-service-hit">
                 <div className="font-service-hit">บริการยอดฮิตของเรา</div>
@@ -172,7 +177,7 @@ const Home = () => {
                     {SecureService}
                 </div>
             </div>
-
+            
             <EmployeeBox />
             <Footer />
         </div>
