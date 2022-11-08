@@ -13,13 +13,15 @@ const Cart = () => {
     const totalPrice = cartlist.reduce((total,current) => total += current.price , initialValue)
     // const totalList = cartlist.reduce((total,current) => total += current ,initialValue)
 
-
     const removeServiceList = (event) => {
 
         console.log("remove : ",event)
     }
-    
-
+    const cList = cartlist.map(item => {
+        return (
+            <BoxService key={item.id} item = {item} serviceRemove = {removeServiceList} />
+        )
+    })
     return(
         <div>
             <Navbar />
@@ -27,16 +29,12 @@ const Cart = () => {
                 <div className="font-head-cart">รายการทั้งหมดของคุณ</div>
             </div>
             <div className="box-service-list">
-                {cartlist.map(item => {
-                    return (
-                        <BoxService key={item.id} item = {item} serviceRemove = {removeServiceList} />
-                    )
-                })}
+                {cList.length === 0 ? <div className="font-no-cart">ไม่มีรายการบริการอยู่ในตะกร้าของคุณ</div> : cList}
             </div>
             <div className="box-payment-fixed">
                 <div className="font-list-amount">
                     <div className="font-l1">รายการทั้งหมด</div>
-                    <div className="font-l2">-</div>
+                    <div className="font-l2">{cList.length}</div>
                     <div className="font-l1">รายการ</div>
                 </div>
                 <div className="font-list-payment">

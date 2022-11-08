@@ -7,7 +7,7 @@ import imgcovid1 from "../pic/covid1.jpg"
 
 
 const BoxServiceList = (list_props) => {
-    console.log("List", list_props)
+    // console.log("List", list_props)
     
 
     const removeList = (event) => {

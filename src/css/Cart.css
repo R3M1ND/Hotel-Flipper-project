@@ -99,7 +99,15 @@
 {
     background-color: #2157DE;
 }
+.font-no-cart
+{
+    font-family: 'Mitr' , sans-serif;
+    font-size: 40px;
+    color: #cacaca;
+    letter-spacing: 0.05em;
+    margin-top: 120px;
 
+}
 
 
 footer
