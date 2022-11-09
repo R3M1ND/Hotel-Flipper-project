@@ -7,20 +7,18 @@ import { Nav } from "react-bootstrap";
 
 const NavbarHotel = () => {
     return (
-        <Navbar className="navbar-class" expand = "lg" >
-            <Container>         
-                <Navbar.Brand href="#home" className="ms-5">logo</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-nacbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" >
-                    <Nav className="nav-class">
-                        <Nav.Link href="#" className="me-5" >บริการ</Nav.Link>
-                        <Nav.Link href="#" className="me-5">สมัครเป็นผู้ให้บริการ</Nav.Link>
-                        <Nav.Link href="#" className="me-5">เกี่ยวกับเรา</Nav.Link>
-                        <Nav.Link href="#" className="me-5">ติดต่อเรา</Nav.Link>
-                        <Nav.Link to="#"><button as="input" type="button" className="btn-register ">ลงทะเบียน</button></Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>   
+        <Navbar className="navbar-class" expand="lg" >
+            <Navbar.Brand href="/" className="logo-margin">logo</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-nacbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" >
+                <Nav className="nav-class">
+                    <Nav.Link href="#" className="me-5">สมัครเป็นผู้ให้บริการ</Nav.Link>
+                    <Nav.Link href="/about" className="me-5">ฟีดแบ็ก</Nav.Link>
+                    <Nav.Link href="/about" className="me-5">เกี่ยวกับเรา</Nav.Link>
+                    <Nav.Link to="#"><button as="input" type="button" className="btn-register me-5">ลงทะเบียน</button></Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+
         </Navbar>
 
 
