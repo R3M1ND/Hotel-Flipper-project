@@ -68,7 +68,7 @@ const EditProfileForm = () => {
         
         console.log(HotelAddr)
 
-        if (HotelAddr.zipcode=""){
+        if (HotelAddr.zipcode==""){
             setNoti("กรุณากรอกรหัสไปรษณีย์")
         }
         else if (!regexPostcode.test(HotelAddr.zipcode)) {
