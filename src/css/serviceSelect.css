@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+
+.detailBoxSelect{
+    width: 1163.53px;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: block;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+.service-TopicSelect{
+    font-family: 'Mitr', sans-serif;
+    color: #2E67F8;
+    font-size: 20px;
+    position: relative;
+    padding-top:50px;
+    padding-left:90px;
+}
+.service-scopeSelect{
+    font-family: 'Mitr', sans-serif;
+    color: #464555;
+    font-size: 20px;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 90px;
+}
+.AddService-button{
+    width: 260px;
+    height: 65px;
+    background-color: #5B81FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    /* position: absolute; */
+    margin-left: 800px;
+    margin-top:50px
+}
+.AddService-button:hover {
+    width: 260px;
+    height: 65px;
+    background: #396bea;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.AddService-font{
+    color: #FFFFFF;
+    font-family: 'Mitr', sans-serif;
+    position: relative;
+    font-size: 20px;
+    padding-left: 68px;
+    padding-top: 15px;
+}
+.service-DropDown{
+    color: #464555;
+    font-family: 'Mitr', sans-serif;
+    font-size: 18px;
+    width: 950px;
+    height: 50px;
+    margin-left: 90px;
+    margin-top: 20px;
+}
+.service-DatePicker{
+    color: #464555;
+    font-family: 'Mitr', sans-serif;
+    width: 250px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 90px;
+    margin-top: 20px;
+}
+.link-btn-detail
+{
+    text-decoration: none;
+}

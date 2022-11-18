@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+.BoxFormLogin{
+    position: relative;
+    background-color: #C2D3FF;
+    max-width: 610px;
+    width: 100%;
+    /* max-height: 602px;
+    height: auto; */
+    height: 602px;
+    border-radius: 20px;
+    margin: 0 20px;
+    box-shadow: 2px 2px 12px 7px rgba(46, 103, 248, 0.1);
+}
+
+.logo-login{
+    width: 120px ;
+    margin-top: 28px;
+}
+
+.Head-Login{
+    margin-top: 15px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color:#2E67F8;
+}
+
+.Scale-input-Login{
+    margin: auto;
+    /* width: 490px; */
+    width: 85%;
+    /* height: 250px; */
+    background-color: transparent;
+}
+
+.usericon{
+    height: 37px;
+    /* width: 30px; */
+    position: absolute;
+    padding: 14px 0 0 17px;
+}
+
+::placeholder {
+    color: #5B81FF ;
+   }
+
+.input-email-box{
+    margin-top: 16px;
+}
+
+.input-email-box input{
+    /* position: absolute; */
+    /* height: 100%; */
+    height: 48px;
+    width: 100%;
+    /* width: 417px; */
+    padding: 0 58px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    color: #5B81FF;
+}
+
+.input-email-box input:focus{
+    border: 1px solid #5B81FF;
+    color: #5B81FF;
+}
+
+.input-password-box{
+    margin-top: 16px;
+}
+
+.input-password-box input{
+    /* position: absolute; */
+    /* height: 100%; */
+    height: 48px;
+    width: 100%;
+    /* width: 417px; */
+    padding: 0 58px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    color: #5B81FF;
+}
+
+.input-password-box input:focus{
+    border: 1px solid #5B81FF;
+    color: #5B81FF;
+}
+
+.forgetpass{
+    font-size: 20px;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 400;
+    color: #464555;
+}
+
+.bttn-Login{
+    background-color: #2E67F8 ;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    /* width: 558px; */
+    width: 100%;
+    display: inline-block;
+    font-size: 25px;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 500;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.bttn-Login:hover{
+    background-color: #5B81FF;
+}
+    
+.bttn-Login:active:after{
+    background-color: #F8F8F8 ;
+    border: 1px solid #2E67F8;
+}
+
+.bttn-gotoSignup{
+    background-color: #ABA9BC ;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    /* width: 558px; */
+    width: 100%;
+    display: inline-block;
+    font-size: 25px;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 500;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.bttn-gotoSignup:hover{
+    background-color: #5B81FF;
+}
+
+.bttn-Login:active:after{
+    background-color: #F8F8F8 ;
+    border: 1px solid #ABA9BC;
+}
+
+.Login_ERROR{
+    width: 100%;
+    margin-top: 8px;
+    font-size: 18px;
+    font-family: 'Mitr', sans-serif;
+    color: #E8003F;
+    font-weight: 400;
+}

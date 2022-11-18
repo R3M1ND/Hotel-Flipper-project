@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
+
+.detailBox{
+    width: 1163.53px;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: block;
+    padding-bottom: 55px;
+    margin-top: 30px;
+}
+.service-name{
+    font-family: 'Mitr', sans-serif;
+    color: #2E67F8;
+    font-size: 33px;
+    position: relative;
+    /* margin-top:200px; */
+    padding-top:55px;
+    padding-left:90px ;
+}
+.service-pic{
+    position: relative;
+    padding-top:20px;
+    padding-left:90px ;
+}
+.service-Topic{
+    font-family: 'Mitr', sans-serif;
+    color: #2E67F8;
+    font-size: 20px;
+    position: relative;
+    padding-top:20px;
+    padding-left:90px ;
+}
+.service-detail-font{
+    font-family: 'Mitr', sans-serif;
+    color: #464555;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-left: 90px;
+    white-space: pre-wrap;
+    line-height: 34px;
+    
+}
+.fi-ss-bulb{
+    color:#B24BC8;
+    padding-right: 10px;
+}
+.fi-sr-exclamation{
+    color:#B24BC8;
+    padding-right: 10px;
+}
+.fi-ss-circle{
+    color:#B24BC8;
+    padding-right: 10px;
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+
+.Box-HotelProfile-Addr
+{
+    border: 1px solid #464555 ;
+    border-radius: 20px;
+    width: 520px ;
+    height: 480px;
+    position:relative;
+    box-shadow: 2px 2px 17px 7px rgba(0, 0, 0, 0.1);
+}
+
+.Head-HetelPF-AD
+{
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 10px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color:#464555;
+}
+.Box-location-hotel
+{
+    display: inline-flex;
+    margin-top: 30px;
+    position: absolute;
+    left: 30px;
+}
+
+
+.Hotel-Location-AD
+{
+    padding-left: 20px;
+    width: 380px;
+    text-align: left;
+    font-family: 'Mitr', sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+    color:#464555;
+}
+
+.for-bttn-edit-HotelAD
+{
+    width: 100%;
+    margin: auto;
+    position:absolute;
+    bottom: 26px;
+}
+
+/* .bttn-edit-HetelAD{
+    background-color: #2E67F8 ;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    width: 259px;
+    display: inline-block;
+    font-size: 25px;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 500;
+    color: white;
+    transition-duration: 0.4s;
+    margin-top: 23px;
+}
+
+.bttn-edit-HetelAD:hover{
+    background-color: #5B81FF;
+}
+
+    
+.bttn-edit-HetelAD:active:after{
+    background-color: #F8F8F8 ;
+    border: 1px solid #2E67F8;
+} */

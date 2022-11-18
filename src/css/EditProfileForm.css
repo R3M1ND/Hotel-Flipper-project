@@ -1,0 +1,270 @@
+.BoxFormEdit{
+    background-color: white ;
+    border: 1px solid #464555 ;
+    max-width: 610px;
+    width: 100%;
+    height: 810px;
+    /* height: 100%; */
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px 7px rgba(46, 103, 248, 0.1);
+}
+
+.scale-one-edit
+{
+    /* background-color: #E8003F; */
+    width: 85%;
+    margin: auto;
+}
+.Head-Edit
+{
+    margin-top: 14px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color:#464555;
+}
+
+.Line-HotelProfile-Edit
+{
+    margin: 8px 0px 30px;
+    border-top: 1px solid #464555;
+
+}
+
+.Form-Edit ::placeholder {
+    color: #464555 ;
+   }
+   
+.one-input-edit-user{
+    margin-top: 16px;
+}
+
+.one-input-edit-user input{
+
+    height: 48px;
+    /* width: 417px; */
+    width: 100%;
+    padding: 0 58px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    color: #464555;
+}
+
+.one-input-edit-user input:focus{
+    border: 1px solid #464555;
+    color: #464555;
+}
+
+.one-input-edit-user input:valid{
+    border: 1px solid transparent;
+    background-color: #F8F8F8 ;
+    color: #464555;
+}
+
+.edit-detail-hotel{
+    margin-top: 15px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color:#464555;
+}
+
+.one-input-edit{
+    margin-top: 16px;
+}
+
+.one-input-edit input{
+    /* position: absolute; */
+    /* height: 100%; */
+    height: 48px;
+    width: 100%;
+    /* width: 493px; */
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+}
+
+.one-input-edit input:focus{
+    border: 1px solid #464555;
+    color: #464555;
+}
+
+.one-input-edit input:valid{
+    border: 1px solid transparent;
+    background-color: #F8F8F8 ;
+    color: #464555;
+}
+
+.scale-three-edit
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: aqua; */
+    width: 475.8px;
+    margin: auto;
+}
+
+.three-input-box-edit{
+    display: inline-block;
+    position: relative;
+    padding: 16px 5px 0px;
+}
+
+.three-input-box-edit input{
+    height: 48px;
+    /* width: 127px; */
+    width: 100%;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    background-color: #f8f8f8;
+}
+    
+
+.three-input-box-edit input:focus{
+    border: 1px solid #464555;
+    color: #464555;
+}
+
+.three-input-box-edit input:optional:focus{
+    border: 1px solid #464555;
+    color: #464555;
+}
+
+.three-input-box-edit input:valid{
+    border: 1px solid transparent;
+    background-color: #F8F8F8 ;
+    color: #464555
+}
+
+.scale-two-edit
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: green; */
+    width: 475.8px;
+    margin: auto;
+}
+
+.two-input-edit-dt{
+    display: inline-block;
+    position: relative;
+    padding: 16px 5px 0px;
+}
+
+.two-input-edit-dt input{
+
+    height: 48px;
+    /* width: 220px; */
+    width: 100%;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    background-color: #f8f8f8;
+}
+
+.two-input-edit-dt input:focus{
+    border: 1px solid #464555;
+    color: #464555;
+}
+
+.two-input-edit-dt input:valid{
+    border: 1px solid transparent;
+    background-color: #F8F8F8 ;
+    color: #464555;
+}
+
+.two-input-edit-city{
+    display: inline-block;
+    position: relative;
+    padding: 16px 5px 0px;
+    
+}
+
+.two-input-edit-city input{
+    height: 48px;
+    width: 100%;
+    /* width: 220px; */
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    background-color: #f8f8f8;
+}
+
+.two-input-edit-city input:focus{
+    border: 1px solid #464555;
+    color: #464555;
+}
+
+.two-input-edit-city input:valid{
+    border: 1px solid transparent;
+    background-color: #F8F8F8 ;
+    color: #464555;
+}
+
+.bttn-Edit{
+    background-color: #464555 ;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    /* width: 533px; */
+    display: inline-block;
+    font-size: 25px;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 500;
+    color: white;
+    transition-duration: 0.4s;
+    margin-top: 20px;
+}
+
+.bttn-Edit:hover{
+    background-color: #797892;
+}
+    
+.bttn-Edit:active:after{
+    background-color: #F8F8F8 ;
+    border: 1px solid #2E67F8;
+}
+
+.goto-profile
+{
+    margin-top: 8px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color:#464555;
+}
+
+.edit_ERROR{
+    font-family: 'Mitr', sans-serif;
+    font-size: 16px;
+    color: #E8003F;
+    margin-top: -23px;
+}

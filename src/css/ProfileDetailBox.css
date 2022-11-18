@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+
+.Box-HotelProfile-Detail
+{
+    border: 1px solid #464555 ;
+    border-radius: 20px;
+    width: 520px ;
+    height: 480px;
+    box-shadow: 2px 2px 17px 7px rgba(0, 0, 0, 0.1);
+}
+
+.Line-HotelProfile-Detail
+{
+    margin: 8px 0px 8px;
+    border-top: 1px solid #464555;
+
+}
+
+.Head-HetelPF-DT
+{
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 10px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color:#464555;
+}
+
+.Hotel-DT
+{
+    text-align: left; 
+    margin-left: 30px;
+}
+.Hotel-Name
+{
+    padding-top: 25px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color:#464555;
+}
+
+.Hotel-Name-DT
+{
+    padding-top: 5px;
+    padding-left: 25px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+    color:#464555;
+}
+
+.Hotel-Email
+{
+    padding-top: 25px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color:#464555;
+}
+
+.Hotel-Email-DT
+{
+    padding-top: 5px;
+    padding-left: 25px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+    color:#464555;
+}
+
+.Hotel-Tel
+{
+    padding-top: 25px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color:#464555;
+}
+
+.Hotel-Tel-DT
+{
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-bottom: 35px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+    color:#464555;
+}
+
+.Line-HotelDT-deco
+{
+    width: 470px;
+    margin: auto;
+    border-top: 1px solid #ABA9BC;
+}
+

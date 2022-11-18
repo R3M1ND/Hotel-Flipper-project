@@ -1,0 +1,11 @@
+.DetailPage-container{
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 100%;
+    /* justify-items: center; */
+    /* justify-content: center; */
+    /* position: absolute; */
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+}

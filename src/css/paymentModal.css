@@ -1,0 +1,52 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+.overlay{
+    background-color: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:0%;
+    left: 0%;
+}
+.payment-ModalBox{
+    position: fixed;
+    top: 25%;
+    left: 40%;
+    width: 300px;
+    height: 330px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fi-rs-receipt{
+    font-size: 100px;
+    color: #464555;
+    padding-top: 25px;
+    /* margin-bottom: -10px; */
+}
+.payment-ModalFont{
+    font-family: 'Mitr', sans-serif;
+    font-size: 20px;
+    /* font-weight: 00; */
+    color: #04af48;
+}
+.payment-ModalFontPos{
+    margin-top: 0px;
+}
+.payment-ModalFont2{
+    font-size: 15px;
+    margin-top: -5px;
+    color:#A5A5A5 !important;
+}
+.payment-ModalButton{
+    background-color: #FFFFFF;
+    border: none;
+    font-family: 'Mitr', sans-serif;
+    font-size: 20px;
+    color: #464555;
+    margin-left: 230px;
+    margin-top: 15px;
+    cursor: pointer;
+}
