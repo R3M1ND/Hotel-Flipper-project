@@ -219,7 +219,7 @@ const EditProfileForm = () => {
 
                     <p className="goto-profile">
                         กลับไปที่หน้า -
-                        <Link to="/ProfilePage">
+                        <Link to="/ProfilePage" style={{textDecoration:'none'}}>
                             <botton> ผู้ใช้งาน</botton>
                         </Link>
                     </p>

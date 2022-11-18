@@ -55,9 +55,9 @@ const LoginForm = () => {
                             <input type="password" placeholder="Password" name="password" id="password" onChange={handleChange}/>
                         </div>
 
-                        <Link to='/ForgetPassword'>
+                        <Link to='/ForgetPassword' style={{textDecoration:'none'}}>
                             <botton>
-                                <p className="forgetpass">
+                                <p className="forgetpass mt-3">
                                     ลืมรหัสผ่านใช่ไหม?
                                 </p>
                             </botton>
