@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import BoxService from "../components/BoxServiceList";
 import axios from 'axios'
 import serviceList from "./Service.json"
+import { Link } from "react-router-dom";
 
 
 const Cart = () => {  
@@ -42,7 +43,7 @@ const Cart = () => {
                     <div className="font-p2">{totalPrice}</div>
                     <div className="font-l1">บาท</div>
                 </div>
-                <button className="btn-payment" >ชำระเงิน</button>
+                <Link to="/paymentpagecart"><button className="btn-payment">ชำระเงิน</button></Link>
             </div>
         
         

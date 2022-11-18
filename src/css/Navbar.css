@@ -9,7 +9,7 @@
 
 .logo-margin
 {
-    margin-left: 90px;
+    margin-left: 60px;
 }
 
 .nav-class
@@ -47,18 +47,19 @@
     color: #2E67F8;
     transform: translateY(0.5px);
 }
-.circle-user
+/* .circle-user
 {
     width: 50px;
     height: 50px;
-    background-color: thistle;
+    background-color: #5B81FF;
     border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
-}
-.circle-user .img-user-navbar
+} */
+.img-user-navbar
 {
-    object-fit: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
+    width: 40px;
+    height: 40px;
 }

@@ -95,27 +95,27 @@ let Service = {
 
 let CovidService = Service.covidCard.map(covid => {
     return (
-        <CardServiceCovid to="#" covid={covid} />
+        <CardServiceCovid to="detailpage" covid={covid} />
     )
 })
 let GeneralService = Service.generalCard.map(general => {
     return (
-        <CardServiceGeneral to="#" general={general} />
+        <CardServiceGeneral to="detailpage" general={general} />
     )
 })
 let MaintainService = Service.maintainCard.map(maintain => {
     return (
-        <CardServiceMaintain to="#" maintain={maintain} />
+        <CardServiceMaintain to="detailpage" maintain={maintain} />
     )
 })
 let DustService = Service.dustCard.map(dust => {
     return (
-        <CardServiceDust to="#" dust={dust} />
+        <CardServiceDust to="detailpage" dust={dust} />
     )
 })
 let SecureService = Service.secureCard.map(secure => {
     return (
-        <CardServiceSecure to="#" secure={secure} />
+        <CardServiceSecure to="detailpage" secure={secure} />
     )
 })
 
@@ -130,18 +130,18 @@ const Home = () => {
                 <div className="font-service-hit">บริการยอดฮิตของเรา</div>
                 <div className="box-card-hit">
                     <CardServiceHit
-                        to="#"
+                        to="detailpage"
                         imgHit={imgService1}
                         text="ทำความสะอาดห้องพัก (แม่บ้าน)"
                     />
 
                     <CardServiceHit
-                        to="#"
+                        to="detailpage"
                         imgHit={imgService2}
                         text="พนักงานรักษาความปลอดภัย"
                     />
                     <CardServiceHit
-                        to="#"
+                        to="detailpage"
                         imgHit={imgService3}
                         text="ทำความสะอาดเครื่องปรับอากาศ"
                     />

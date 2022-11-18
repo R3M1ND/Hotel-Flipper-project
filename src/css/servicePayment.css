@@ -1,0 +1,153 @@
+.paymentBox{
+    width: 1000px;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+}
+.payment-Topic{
+    font-family: 'Mitr', sans-serif;
+    color: #2E67F8;
+    font-size: 20px;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+}
+.payment-font{
+    font-family: 'Mitr', sans-serif;
+    color: #464555;
+    font-size: 18px;
+}
+.payment-column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.payment-radiopost{
+    margin-left: 100px;
+}
+.payment-button{
+    width: 300px;
+    height: 74px;
+    background: #5B81FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    font-family: 'Mitr', sans-serif;
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-left: 350px;
+}
+.payment-button:hover{
+    background: #396bea;
+}
+.payment-promptpayBox{
+    width: 350px;
+    height: 460px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+.payment-promptpayHeader{
+    width: 350px;
+    height:70px;
+    background: #0E3E68;
+    color: #000000;
+    border-radius: 5px 5px 0px 0px;
+}
+.payment-promptpayPos{
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+}
+.payment-promptpaylogoPos{
+    margin-top: 5px;
+    /* margin-left: 100px; */
+}
+.payment-promptpaylogoPos2{
+    margin-top: 15px;
+    /* margin-left: 130px; */
+}
+.payment-qrcodePos{
+    margin-top: 10px;
+    /* margin-left: 48px; */
+}
+.payment-namePos{
+    margin-top: 5px;
+}
+.payment-creditcardBox{
+    width: 420px;
+    height: 400px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin-top:10px;
+    margin-bottom: 20px;
+    display: flex; 
+    flex-direction: column;
+}
+.payment-input{
+    width: 350px;
+    height: 30px;   
+    background: #FFFFFF;
+    border: 1px solid #C5C5C5;
+    border-radius: 3px;
+    margin-left:20px;
+    margin-top: 5px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 18px;
+    color: #464555;
+    padding: 10px 5px;
+}
+.payment-input2{
+    width: 150px;
+    height: 20px;  
+    background: #FFFFFF;
+    border: 1px solid #C5C5C5;
+    border-radius: 3px;
+    /* margin-left:20px; */
+    margin-top: 5px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 18px;
+    color: #464555;
+    padding: 10px 5px;
+}
+.payment-input:placeholder-shown{
+    font-family: 'Mitr', sans-serif;
+    font-size: 15px;
+    padding: 10px 5px;
+}
+.payment-input2:placeholder-shown{
+    font-family: 'Mitr', sans-serif;
+    font-size: 15px;
+    padding: 10px 5px;
+}
+.mastercard{
+    margin-left: 73px;
+    margin-top: 20px;
+}
+.payment-pos{
+    margin-top:20px;
+    margin-left:20px;
+}
+.payment-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top:20px;
+    margin-left: 20px;
+}
+.payment-NewBankBox{
+    width: 280px;
+    height: 350px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    margin-top:10px;
+    margin-bottom: 20px;
+}

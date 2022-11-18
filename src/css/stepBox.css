@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+
+.stepBox{
+    width: 680px;
+    height: 150px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+.stepBox-font{
+    font-family: 'Mitr', sans-serif;
+    color: #2E67F8;
+    font-size: 18px;
+}
+.stepBox-font1{
+    margin-top: 38px;
+    margin-left: 10px;
+}
+.stepBox-font2{
+    margin-top: 38px;
+    margin-left: -10px;
+}
+.stepBox-font3{
+    margin-top: 38px;
+    margin-left: 12px;
+}
+.stepBox-font4{
+    margin-top: -17px;
+    margin-left: 10px;
+}
+.linestepBox{
+    width:120px;
+    height: 5px;
+    background-color: #2E67F8;
+    margin-top: -60px;
+    margin-left: 80px;
+}
+.linestepBoxGray{
+    width:120px;
+    height: 5px;
+    background-color: #C8C8C9;
+    margin-top: -60px;
+    margin-left: 80px;
+}
+.fi-rs-circle{
+    font-size: 80px;
+    color: #2E67F8;
+}
+.grayColor{
+    /* font-size: 80px; */
+    color:#C8C8C9 !important;
+}
+.fi-rr-list{
+    font-size: 45px;
+    position: absolute;
+    /* margin-right: 100px; */
+    margin-left: -63px;
+    margin-top: 20px;
+}
+.fi-br-shopping-cart-check{
+    font-size: 45px;
+    position: absolute;
+    margin-left: -63px;
+    margin-top: 20px;
+}
+.fi-bs-menu-dots{
+    font-size: 45px;
+    position: absolute;
+    margin-left: -63px;
+    margin-top: 20px;
+}
+.fi-rs-money{
+    font-size: 45px;
+    position: absolute;
+    margin-left: -63px;
+    margin-top: 20px;
+}
+.gray{
+    color: #C8C8C9 !important;
+}
+.cartPos{
+    padding-left: -100px;
+}
+.newlinestepBox{
+    width:120px;
+    height: 5px;
+    background-color: #2E67F8;
+}
+.newstepBox-font{
+    font-family: 'Mitr', sans-serif;
+    color: #2E67F8;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.threePos{
+    margin-left: 70px;
+    margin-top: 20px;
+}
