@@ -35,7 +35,7 @@ const PaymentPage = () =>{
                             <div className="order-total">รวมทั้งสิ้น</div>
                             <div className="order-totalprice">{totalPrice}&emsp;บาท</div>
                         </div>
-                    </div>
+                </div>
                 {/* <ServiceOrder /> */}
                 {/* { serviceList.map((item) => (
                 <div ><ServiceOrder item={item} number = ""/></div>

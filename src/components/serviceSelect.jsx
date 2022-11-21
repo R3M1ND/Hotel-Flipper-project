@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 
 
-const ServiceSelect = () => {
+const ServiceSelect = (props) => {
 
     // เดี๋ยวมาเขียนเพิ่มoptionแบบmapเอา
     // const {detail} = props
@@ -61,12 +61,6 @@ const ServiceSelect = () => {
         }
     }, [])
 
-    // const options = [
-    //     { value: 'chocolate', label: 'Chocolate' },
-    //     { value: 'strawberry', label: 'Strawberry' },
-    //     { value: 'vanilla', label: 'Vanilla' }
-    // ]
-
     //dropdown get data internal
     const labelList = listdata.Dropdown
 
@@ -75,16 +69,17 @@ const ServiceSelect = () => {
             <div className="detailBoxSelect">
                 <div className="service-TopicSelect">บริการที่ต้องการ</div>
                 {/* {selects} */}
+                
                 <select className="service-DropDown"
                     value={selectService}
-                    // value={details.service}
                     onChange={handleSelectService}>
-                    {labelList.map((option) => (
-                        <option value={option.value}>{option.list}</option>
-                    ))}
-                    {/* <option value='Mango'>mango</option>   */}
-                    {/* <option value='Banana'>Banana </option>  */}
+                        {
+                            props.object.map(item=>{
+                                return <option value={item.s_id}>{item.s_name}</option>
+                            })
+                        }
                 </select>
+                
 
                 <div className="service-TopicSelect">วันที่และเวลาที่ต้องการรับบริการ</div>
                 <DatePicker
@@ -131,13 +126,13 @@ const ServiceSelect = () => {
                 dateFormat="h:mm aa"
                 placeholderText="Select your time"
             /> */}
-                <Link to = "/qapage" className="link-btn-detail">
-                <div className="AddService-button">
-                    <div
-                        className="AddService-font"
-                        onClick={sendToCart}
-                    >ดำเนินการต่อ</div>
-                </div></Link>
+                <Link to="/qapage" className="link-btn-detail">
+                    <div className="AddService-button">
+                        <div
+                            className="AddService-font"
+                            onClick={sendToCart}
+                        >ดำเนินการต่อ</div>
+                    </div></Link>
             </div>
 
         </div>

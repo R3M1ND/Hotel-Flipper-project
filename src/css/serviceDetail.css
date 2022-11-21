@@ -26,6 +26,11 @@
     position: relative;
     padding-top:20px;
     padding-left:90px ;
+    
+}
+.service-pic .img-detail
+{
+    object-fit: cover;
 }
 .service-Topic{
     font-family: 'Mitr', sans-serif;
@@ -43,9 +48,9 @@
     flex-direction: row;
     padding-top: 10px;
     padding-left: 90px;
-    white-space: pre-wrap;
     line-height: 34px;
-    
+    width: 90%;
+    word-wrap: break-word;
 }
 .fi-ss-bulb{
     color:#B24BC8;
