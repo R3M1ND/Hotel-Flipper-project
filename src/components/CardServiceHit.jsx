@@ -11,10 +11,10 @@ import { useEffect } from "react";
 const CardServiceHit = (props) => {
     const [isClick, setIsClick] = useState(false)
     const navigate = useNavigate()
-  
+
     const sendDetail = async(e,getId) => {
         e.preventDefault()
-        const res = await axios.get(`http://localhost:3000/api/servicetype/${getId}`)
+        const res = await axios.get(`http://localhost:3001/api/servicetype/${getId}`)
         .then(function (res){
             if(res.status == 200){
                 console.log('data card : ',res)

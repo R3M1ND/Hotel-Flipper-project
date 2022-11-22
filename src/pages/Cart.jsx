@@ -1,29 +1,62 @@
 import React from "react";
-import  "../css/Cart.css";
+import "../css/Cart.css";
 import Navbar from "../components/Navbar";
 import BoxService from "../components/BoxServiceList";
 import axios from 'axios'
 import serviceList from "./Service.json"
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
 
 
-const Cart = () => {  
-    const cartlist = serviceList.maintainList
+const Cart = () => {
     const initialValue = 0
-    
-    const totalPrice = cartlist.reduce((total,current) => total += current.price , initialValue)
-    // const totalList = cartlist.reduce((total,current) => total += current ,initialValue)
+    const [serviceOrder, setServiceOrder] = useState([])
+    const [imgOrder, setImgOrder] = useState([])
 
-    const removeServiceList = (event) => {
-
-        console.log("remove : ",event)
+    const fetchOrder = async () => {
+        const res = await axios.get('http://localhost:3001/api/service')
+            .then(function (res) {
+                setServiceOrder(res.data)
+                console.log("service >> ", res.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
-    const cList = cartlist.map(item => {
+    const fetchImg = async () => {
+        const res = await axios.get('http://localhost:3001/api/servicetype')
+            .then(function (res) {
+                setImgOrder(res.data)
+                console.log("Img >> ", res.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+    useEffect(() => {
+        fetchOrder()
+        fetchImg()
+    }, [])
+
+    const filterOrder = serviceOrder.map(s => {
+        let x = imgOrder.filter( i => i.s_type === s.s_type)
+        return [x[0].s_imgPath,s.s_name]
+    })
+  
+    const totalPrice = serviceOrder.reduce((total, current) => total += current.s_price, initialValue)
+    const removeServiceList = (event) => {
+            console.log("remove : ", event)
+        }
+        
+    const cList = serviceOrder.map(item => {
         return (
-            <BoxService key={item.id} item = {item} serviceRemove = {removeServiceList} />
+            <BoxService key={item.id} s_type={item.s_type} s_name={item.s_name} s_price={item.s_price} s_imgPath = {filterOrder.filter(f => f[1] === item.s_name)[0][0]}  serviceRemove={removeServiceList} />
         )
     })
-    return(
+    
+    return (
         <div>
             <Navbar />
             <div className="box-head-cart">
@@ -45,12 +78,12 @@ const Cart = () => {
                 </div>
                 <Link to="/paymentpagecart"><button className="btn-payment">ชำระเงิน</button></Link>
             </div>
-        
-        
-        <footer></footer>
+
+
+            <footer></footer>
         </div>
 
-        
+
 
     )
 }

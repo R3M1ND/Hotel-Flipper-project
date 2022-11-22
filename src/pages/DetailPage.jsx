@@ -18,9 +18,9 @@ const DetailPage=()=>{
     
 
     const fetchList = async() => {
-        const res  = await axios.get(`http://localhost:3000/api/service`)
+        const res  = await axios.get(`http://localhost:3001/api/service`)
         .then(res => {
-            console.log('res data >> ',res.data)
+            // get s_name
             setCurrentList(res.data)
         })
         .catch(err => {
@@ -28,7 +28,7 @@ const DetailPage=()=>{
         })
     }
     const fetchDetail = async () => {
-        const res  = await axios.get(`http://localhost:3000/api/servicetype/${getId}`)
+        const res  = await axios.get(`http://localhost:3001/api/servicetype/${getId}`)
         .then(res => {
             setCurrentService(res.data)
             setIsOk(true)
@@ -47,17 +47,14 @@ const DetailPage=()=>{
     return(
         <div >
         <div className="DetailPage-container">
-            {isOk ? <ServiceDetail 
+            {<ServiceDetail 
                 id = {currentService.t_id}
                 s_type = {currentService.s_type}
                 s_bound = {currentService.s_bound}
                 s_cond = {currentService.s_cond}
                 s_imgPath = {currentService.s_imgPath}
                 s_name = {filterList.map(r => r.s_name).join('\n')}
-
-                
-            /> : console.log('wait')}
-            {/* <ServiceDetail /> */}
+            /> }
                 <ServiceSelect 
                 object = {filterList}
                 s_id = {filterList.map(r => r.s_id)}

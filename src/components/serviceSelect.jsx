@@ -8,58 +8,77 @@ import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css'
 import "../css/serviceSelect.css"
 import listdata from "../pages/ServiceDetail.json";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
 const ServiceSelect = (props) => {
 
-    // เดี๋ยวมาเขียนเพิ่มoptionแบบmapเอา
-    // const {detail} = props
-    // const[defaultService,setDefaultService] = useState({option:detail.defaultService})
-
-    // const {select} = props
-    // const[currentSelect,setCurrentSelect] = useState({name:select.name})
-    const [selectService, setSelectservice] = useState('')
+    const [selectService, setSelectservice] = useState()
     const [selectDate, setSelectDate] = useState('')
-    // const [selectTime,setSelectTime] = useState(setHours(setMinutes(new Date(), 30), 17))
     const [isSubmit, setIsSubmit] = useState(false)
-
-    // const[details,setDetails] = useState({service:'',date:'',time:''})
-
-    // const handleChange = (e) =>{
-    //     const{name,value} = e.target.value
-    //     setDetails({...details,[name]:value})
-    // }
+    const navigate = useNavigate()
+    const linkCart = () => navigate("/cart")
 
     const handleSelectService = e => {
         setSelectservice(e.target.value)
-        console.log(selectService)
-        // onChange={e=>setSelects(e.target.value)}
     }
     const handleSelectDate = e => {
         setSelectDate(e)
-        console.log(selectDate)
     }
-    // const handleSelectTime = e =>{
-    //     setSelectTime(e)
-    //     console.log(selectTime)
-    // }
-
     //ส่งให้ back ตรงนี้
-    const sendToCart = e => {
-        e.preventDefault();
+    const sendToCart = (e) => {
+        // e.preventDefault();
         setIsSubmit(true)
-        // console.log(isSubmit)
     }
 
-    useEffect(() => {
-        if (selectDate && selectService && isSubmit === true) {
-            console.log(isSubmit)
-            console.log(selectService)
-            console.log(selectDate)
+    const fetchCreat = async() => {
+        const data ={
+            "u_id": "125"
         }
-    }, [])
+        const creat = await axios.post(`http://localhost:3002/api/cartuser/create`,data)
+        .then(function(creat) {
+            console.log("creat cart for new member : " ,creat.data.cartuser.cart_id)
+            return  creat.data.cartuser.cart_id
+            
+        })
+    }
+    const fetchUser = async(e,getId) => {
+        const res = await axios.get("http://localhost:3002/api/cartuser/user=125")
+        .then(function(res) {
+            //check cart new member : useCreatCart
+            if(res.data == ""){
+                fetchCreat()
+                // navigate(String('/detailpage?Id=' + getId),res.data)
+            }
+            else{
+                console.log("creat cart already : " ,res.data.cart_id)
+                return res.data.cart_id
+                
+            }
+            // console.log("creat cart already : ",res)
+            // console.log('cart_id :',res.data.cart_id)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
+    const fetchOrder = async() => {
+        const res = await axios.get("http://localhost:3002/api/cartservice/cart=63738c7635bd41ca85b256a7")
+        .then(function(res) {
+            // console.log('getCart :',res.data.cartservice)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
+    // const fetchOrder = async() => {
+
+    // }
+    useEffect(() => {
+        fetchUser()
+        fetchOrder()
+    },[])
 
     //dropdown get data internal
     const labelList = listdata.Dropdown
@@ -68,18 +87,13 @@ const ServiceSelect = (props) => {
         <div>
             <div className="detailBoxSelect">
                 <div className="service-TopicSelect">บริการที่ต้องการ</div>
-                {/* {selects} */}
-                
                 <select className="service-DropDown"
-                    value={selectService}
-                    onChange={handleSelectService}>
-                        {
-                            props.object.map(item=>{
-                                return <option value={item.s_id}>{item.s_name}</option>
-                            })
-                        }
+                    onChange={handleSelectService}
+                >
+                    {props.object.map(item => {
+                        return <option value={item.s_id}>{item.s_name}</option>
+                    })}
                 </select>
-                
 
                 <div className="service-TopicSelect">วันที่และเวลาที่ต้องการรับบริการ</div>
                 <DatePicker
@@ -93,46 +107,14 @@ const ServiceSelect = (props) => {
                     showYearDropdown
                     dropdownMode="select"
                     placeholderText="Select your date and time"
-
                     showTimeSelect
                 />
+                <button className="AddService-button" onClick={(e) => { sendToCart(e); linkCart() }}>
+                    <div
+                        className="AddService-font"
+                    >ดำเนินการต่อ</div>
+                </button>
 
-
-                {/* <div className="service-TopicSelect">วันที่ที่ต้องการรับบริการ</div>
-            <DatePicker
-                className="service-DatePicker"
-                selected={selectDate}
-                // selected={details.date}
-                onChange={handleSelectDate}
-                dateFormat='yyyy/MM/dd'
-                minDate={new Date()}
-                showMonthDropdown
-                useShortMonthInDropdown
-                showYearDropdown
-                dropdownMode="select"
-                placeholderText="Select your date"
-            />
-            <div className="service-TopicSelect">ระยะเวลา</div>
-            <DatePicker
-                className="service-DatePicker"
-                selected={selectTime}
-                // selected={details.time}
-                onChange={handleSelectTime}
-                showTimeSelect
-                showTimeSelectOnly
-                
-                // minTime={setHours(setMinutes(new Date(), 0), 8)}
-                // maxTime={setHours(setMinutes(new Date(), 0), 18)}
-                dateFormat="h:mm aa"
-                placeholderText="Select your time"
-            /> */}
-                <Link to="/qapage" className="link-btn-detail">
-                    <div className="AddService-button">
-                        <div
-                            className="AddService-font"
-                            onClick={sendToCart}
-                        >ดำเนินการต่อ</div>
-                    </div></Link>
             </div>
 
         </div>

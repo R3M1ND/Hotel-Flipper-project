@@ -51,6 +51,7 @@
     line-height: 34px;
     width: 90%;
     word-wrap: break-word;
+    white-space: pre-wrap;
 }
 .fi-ss-bulb{
     color:#B24BC8;

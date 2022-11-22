@@ -16,7 +16,6 @@
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-
     align-items: center;
 }
 .box-img-list
@@ -30,12 +29,13 @@
 {
     object-fit: cover;
     width: 360px;
-    height: 150px;
+    height: 160px;
 }
 .font-service-list
 {
     font-family: 'Mitr' , sans-serif;
-    margin-left: 40px;
+    padding-left: 40px;
+    /* margin-left: 40px; */
     letter-spacing: 0.05em;
 }
 .font-title-list
@@ -53,11 +53,11 @@
 }
 .font-price-list
 {
-    margin-left: 200px;
+    margin-left: 150px;
+    padding-right: 40px;
     font-family: 'Mitr' , sans-serif;
     font-size: 20px;
     color: #2E67F8;
-    margin-right: 50px;
 }
 .btn-remove-list
 {

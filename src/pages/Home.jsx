@@ -47,14 +47,9 @@ const Home = () => {
 
 
     const fetchData = async() =>{
-        const res = await axios.get('http://localhost:3000/api/servicetype')
+        const res = await axios.get('http://localhost:3001/api/servicetype')
         .then(function (res) {
             setDataService(res.data)
-            // console.log(res.data)
-            console.log(">>>",res.data.filter(filterType).map(item=>{
-                console.log(item.s_type)
-            }))
-            console.log("data : ",res.data)
         })
         
         .catch(err=>{
@@ -63,9 +58,9 @@ const Home = () => {
         
     }
     const fetchDetail = async() =>{
-        const res = await axios.get('http://localhost:3000/api/service')
+        const res = await axios.get('http://localhost:3001/api/service')
         .then(function (res) {
-            console.log("detail ",res)
+            console.log("service ",res)
         })
         
         .catch(err=>{
