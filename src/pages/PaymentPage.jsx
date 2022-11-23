@@ -2,13 +2,11 @@ import React from "react"
 import "../css/PaymentPage.css"
 import ServicePayment from "../components/servicePayment"
 import StepBox from '../components/stepBox'
-import demoOrder from'./demoOrder'
 import serviceList from "./Service.json"
 import { useEffect } from "react"
 
 
 const PaymentPage = () =>{
-    console.log(demoOrder)
     const cartlist = serviceList.maintainList
     
     const initialValue = 0

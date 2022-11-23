@@ -1,14 +1,11 @@
 import React from "react"
 import "../css/PaymentPageCart.css"
 import ServicePayment from "../components/servicePayment"
-import demoOrder from './demoOrder'
 import serviceList from "./Service.json"
 import { useEffect } from "react"
 
 
 const PaymentPageCart = () => {
-    console.log(demoOrder)
-
     const cartlist = serviceList.maintainList
     
     const initialValue = 0
@@ -39,7 +36,7 @@ const PaymentPageCart = () => {
                             <div className="order-totalprice">{totalPrice}&emsp;บาท</div>
                         </div>
                     </div>
-                <ServicePayment />
+                <ServicePayment total={totalPrice} />
             </div>
         </div>
     )

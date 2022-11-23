@@ -5,8 +5,7 @@ import axios from 'axios'
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css'
 import "../css/serviceSelect.css"
-import listdata from "../pages/ServiceDetail.json";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -77,8 +76,6 @@ const ServiceSelect = (props) => {
         
     },[])
 
-    //dropdown get data internal
-    const labelList = listdata.Dropdown
     return (
         <div>
             <div className="detailBoxSelect">
