@@ -47,9 +47,9 @@
     background-color: #5B81FF;
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-left: 180px;
     margin-top: 25px;
     text-align: center;
+    border: none;
 }
 .QAPage-button:hover{
     background-color: #396bea;
@@ -59,14 +59,15 @@
     color: #FFFFFF;
     font-family: 'Mitr', sans-serif;
     font-size:20px;
-    padding-top: 20px;
 }
 .QAPage-buttonPos{
-    display: flex;
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
 }
 .QAPage-button2{
     background-color: rgb(43, 181, 87);
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 .QAPage-button2:hover{
     background-color: rgb(32, 146, 68);
@@ -79,6 +80,11 @@
     opacity: 100;
     cursor:pointer;
 }
+/* .buttonPos{
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+} */
 
 /* .checkmark {
     position: absolute;

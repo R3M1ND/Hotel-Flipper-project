@@ -1,10 +1,13 @@
 import React from "react";
+import { useEffect } from "react";
 import NavbarHotel from "../components/Navbar";
 import "../css/Aboutpage.css"
 
-
-
 const Aboutpage = () => {
+    useEffect(() => {
+        document.title = "Hotel Flipper"
+        
+    },[])
     return (
         <div className="contain-page" >
             <NavbarHotel />

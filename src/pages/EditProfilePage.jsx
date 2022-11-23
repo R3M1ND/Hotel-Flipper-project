@@ -1,11 +1,15 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import EditProfileForm from "../components/EditProfileForm";
 import '../css/EditProfile.css';
 import NavbarHotel from "../components/Navbar";
+import { useEffect } from "react";
 
 
 const EditProfilePage =() =>{
+    useEffect(() => {
+        document.title = "Hotel Flipper"
+        
+    },[])
     return(
         <div>
             <div className="bg-roomservice">

@@ -3,8 +3,6 @@ import { useEffect } from "react";
 import { useState } from "react"
 import axios from 'axios'
 import DatePicker from "react-datepicker";
-// import setHours from "date-fns/setHours";
-// import setMinutes from "date-fns/setMinutes";
 import 'react-datepicker/dist/react-datepicker.css'
 import "../css/serviceSelect.css"
 import listdata from "../pages/ServiceDetail.json";
@@ -13,12 +11,21 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 const ServiceSelect = (props) => {
+    const h_id = '170' // localStorage.getItem('h_id')
 
-    const [selectService, setSelectservice] = useState()
+    const [selectService, setSelectservice] = useState('')
     const [selectDate, setSelectDate] = useState('')
     const [isSubmit, setIsSubmit] = useState(false)
     const navigate = useNavigate()
-    const linkCart = () => navigate("/cart")
+    
+    const linkCart = (e, getId) => {
+        var _test = getId.then(getId => { 
+            e.preventDefault()
+            navigate(String('/cart?cart=' + getId))
+
+        })
+    }
+    
 
     const handleSelectService = e => {
         setSelectservice(e.target.value)
@@ -26,69 +33,59 @@ const ServiceSelect = (props) => {
     const handleSelectDate = e => {
         setSelectDate(e)
     }
+
     //ส่งให้ back ตรงนี้
     const sendToCart = (e) => {
-        // e.preventDefault();
         setIsSubmit(true)
     }
+    
 
-    const fetchCreat = async() => {
-        const data ={
-            "u_id": "125"
+    const fetchUser = async() => {
+        const res = await axios.get(`http://localhost:3002/api/cartuser/user=${h_id}`)
+
+        //check cart new member : useCreatCart
+        if(res.data.cartuser === null) {
+            const data ={
+                "u_id": h_id // 
+            }
+            const create = await axios.post(`http://localhost:3002/api/cartuser/create`, data)
+            return create.data.cartuser.cart_id
         }
-        const creat = await axios.post(`http://localhost:3002/api/cartuser/create`,data)
-        .then(function(creat) {
-            console.log("creat cart for new member : " ,creat.data.cartuser.cart_id)
-            return  creat.data.cartuser.cart_id
-            
-        })
+        else{
+            return res.data.cartuser.cart_id
+        }
     }
-    const fetchUser = async(e,getId) => {
-        const res = await axios.get("http://localhost:3002/api/cartuser/user=125")
-        .then(function(res) {
-            //check cart new member : useCreatCart
-            if(res.data == ""){
-                fetchCreat()
-                // navigate(String('/detailpage?Id=' + getId),res.data)
-            }
-            else{
-                console.log("creat cart already : " ,res.data.cart_id)
-                return res.data.cart_id
-                
-            }
-            // console.log("creat cart already : ",res)
-            // console.log('cart_id :',res.data.cart_id)
+    
+    const fetchAdd = async(cart_id, s_id, time_start) => {
+        const cartId = await cart_id
+        const data = {
+            'cart_id' : cartId,
+            's_id' : s_id,
+            'time_start' : time_start,
+        }
+        const addToCart = await axios.post(`http://localhost:3002/api/cartservice/add/`, data)
+        .then(res => {
+            console.log('Add to Cart Success!!')
+            return res.data
         })
         .catch(err => {
             console.log(err)
         })
     }
-    const fetchOrder = async() => {
-        const res = await axios.get("http://localhost:3002/api/cartservice/cart=63738c7635bd41ca85b256a7")
-        .then(function(res) {
-            // console.log('getCart :',res.data.cartservice)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-    }
-    // const fetchOrder = async() => {
 
-    // }
     useEffect(() => {
-        fetchUser()
-        fetchOrder()
+        
     },[])
 
     //dropdown get data internal
     const labelList = listdata.Dropdown
-
     return (
         <div>
             <div className="detailBoxSelect">
                 <div className="service-TopicSelect">บริการที่ต้องการ</div>
                 <select className="service-DropDown"
                     onChange={handleSelectService}
+                    selected={selectService}
                 >
                     {props.object.map(item => {
                         return <option value={item.s_id}>{item.s_name}</option>
@@ -109,10 +106,14 @@ const ServiceSelect = (props) => {
                     placeholderText="Select your date and time"
                     showTimeSelect
                 />
-                <button className="AddService-button" onClick={(e) => { sendToCart(e); linkCart() }}>
+                <button className="AddService-button" onClick={(e) => { 
+                    sendToCart(e); 
+                    linkCart(e, fetchUser().then(res => { return res }));
+                    fetchAdd(fetchUser().then(res => { return res }), selectService, selectDate);
+                    }}>
                     <div
                         className="AddService-font"
-                    >ดำเนินการต่อ</div>
+                    >เพิ่มเข้าตะกร้า</div>
                 </button>
 
             </div>

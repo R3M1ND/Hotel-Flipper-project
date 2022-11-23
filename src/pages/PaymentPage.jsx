@@ -1,14 +1,14 @@
 import React from "react"
 import "../css/PaymentPage.css"
-import ServiceOrder from "../components/serviceOrder"
 import ServicePayment from "../components/servicePayment"
 import StepBox from '../components/stepBox'
 import demoOrder from'./demoOrder'
 import serviceList from "./Service.json"
+import { useEffect } from "react"
+
 
 const PaymentPage = () =>{
     console.log(demoOrder)
-    //ลอง demo order แล้วไม่ขึ้นอ่า T-T
     const cartlist = serviceList.maintainList
     
     const initialValue = 0
@@ -19,7 +19,10 @@ const PaymentPage = () =>{
     const orderPrice = cartlist.map(item => {
         return (item.price +'\n')
     })
-
+    useEffect(() => {
+        document.title = "Hotel Flipper"
+        
+    },[])
     return(
         <div>
             
@@ -36,11 +39,7 @@ const PaymentPage = () =>{
                             <div className="order-totalprice">{totalPrice}&emsp;บาท</div>
                         </div>
                 </div>
-                {/* <ServiceOrder /> */}
-                {/* { serviceList.map((item) => (
-                <div ><ServiceOrder item={item} number = ""/></div>
-                ))} */}
-                <ServicePayment />
+                <ServicePayment total={totalPrice}/>
             </div>
         </div>
     )

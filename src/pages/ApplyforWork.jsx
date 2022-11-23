@@ -1,16 +1,18 @@
-import React, {useEffect,useState} from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, {useEffect} from "react";
 import ApplyforWorkForm from "../components/ApplyforWorkForm";
 import '../css/ApplyforWork.css'
 import keeper from "../assets/keeper.png"
 import NavbarHotel from "../components/Navbar";
 
 const ApplyforWork  = () => {
+    useEffect(() => {
+        document.title = "Hotel Flipper"
+        
+    },[])
     return(
         <body className="body1">
             <div className="bg-roomservice">
                 <div className="bg-roomfade">
-                {/* <div className="blur"></div> */}
                     <NavbarHotel />
                     <img src={keeper} alt="#" className="keeperfix"/>
                     <div className="Form-ApplyforWork">

@@ -1,10 +1,13 @@
-import React, { useState,useEffect}  from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect}  from "react";
 import LoginForm from "../components/LoginForm";
 import NavbarHotel from "../components/Navbar";
 import '../css/Login.css';
 
 const LoginPage =() =>{
+    useEffect(() => {
+        document.title = "Hotel Flipper"
+        
+    },[])
     return(
         
         <div  className="contain-login-page">

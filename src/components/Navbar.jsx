@@ -1,7 +1,6 @@
 import React from "react"
 import "../css/Navbar.css"
 import Navbar from "react-bootstrap/Navbar"
-import Container from 'react-bootstrap/Container';
 import { Nav } from "react-bootstrap";
 import usericon from "../pic/user-icon.png"
 
@@ -22,9 +21,8 @@ const NavbarHotel = (props) => {
                     <Nav.Link href="/ApplyforWork" className="me-5">สมัครเป็นผู้ให้บริการ</Nav.Link>
                     <Nav.Link href="/feedbackpage" className="me-5">ฟีดแบ็ก</Nav.Link>
                     <Nav.Link href="/about" className="me-5">เกี่ยวกับเรา</Nav.Link>
-                    {/* <Nav.Link to="#"><button as="input" type="button" className="btn-register me-5">ลงทะเบียน</button></Nav.Link> */}
-                    <Nav.Link href="/ProfilePage"><div className="me-5"><img src={usericon} alt="#" className="img-user-navbar" /></div></Nav.Link>
-
+                    {localStorage.getItem('h_id') === undefined ? <Nav.Link href="/SignupPage"><button as="input" type="button" className="btn-register me-5">ลงทะเบียน</button></Nav.Link>
+                    : <Nav.Link href="/ProfilePage"><div className="me-5"><img src={usericon} alt="#" className="img-user-navbar" /></div></Nav.Link>}
                 </Nav>
             </Navbar.Collapse>
 

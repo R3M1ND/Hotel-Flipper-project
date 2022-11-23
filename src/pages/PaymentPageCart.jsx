@@ -3,8 +3,10 @@ import "../css/PaymentPageCart.css"
 import ServicePayment from "../components/servicePayment"
 import demoOrder from './demoOrder'
 import serviceList from "./Service.json"
+import { useEffect } from "react"
 
-const PaymentPageCart = (order_props) => {
+
+const PaymentPageCart = () => {
     console.log(demoOrder)
 
     const cartlist = serviceList.maintainList
@@ -17,12 +19,15 @@ const PaymentPageCart = (order_props) => {
     const orderPrice = cartlist.map(item => {
         return (item.price +'\n')
     })
+    useEffect(() => {
+        document.title = "Hotel Flipper"
+        
+    },[])
 
     return (
         <div>
 
             <div className="PaymentPageCart-container">
-                {/* <ServiceOrder /> */}
                     <div className="orderBox">
                         <div className="order-ID">รหัส </div>
                         <div className="order-gridcolumn">

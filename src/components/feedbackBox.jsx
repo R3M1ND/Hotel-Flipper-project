@@ -2,43 +2,30 @@ import axios from "axios"
 import React from "react"
 import { useEffect,useState } from "react"
 import '../css/feedbackBox.css'
+import person from '../pic/person.png'
+const FeedbackBox =(props) =>{
+    const[comment,setComment] = useState({name:'',rate:'',ment:''})
 
-const FeedbackBox =() =>{
-    const[comment,setComment] = useState({pic:'',name:'',rate:'',ment:''})
-
-    //รับจาก back ตรงนี้
-    useEffect(()=>{
-        axios
-        .get('')
-        .then(res=>{
-            setComment(res.data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-    },[])
-    
     return(
     <div>
         <div className="feedbackBox-Box">
             <div className="feedbackBox-grid feedbackBox-font">
                 <div>
-                    <img width="150" height="150" src="" alt=""/>
+                    <img src={person} width="100" height="100" alt="" className="personPos"/>
+                    
                 </div>
                 <div>
-                    เกรซ
-                    {/* {comment.name} */}
-                {/* <div className="feedbackBox-commentPos">RatingRatingRatingRatingRatingRatingRatingRatingRatingRatingRatingRatingRating</div> */}
+                    ชื่อ :
+                    {props.name}
                 </div>
-                <div>Rate
-                    {/* {comment.rate} */}
+                <div>Rate: 
+                    {props.rate}
                 </div>
                 
             </div>
-            <div className="feedbackBox-comment">
+            <div className="feedbackBox-comment feedbackBox-commentPos">
                 <div className="gracefont">
-                    {comment.ment}
-                    {/* gracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegrace */}
+                    {props.ment}
                 </div>
             </div>
         </div>

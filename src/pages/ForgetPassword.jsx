@@ -1,4 +1,4 @@
-import React , { useState,useEffect,useRef} from "react";
+import React , { useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import '../css/ForgetPassword.css'
@@ -24,10 +24,10 @@ const ForgetPassword = () =>{
 
     useEffect(()=>{
         console.log(error)
-        // console.log(details)
         if(Object.keys(error).lenght=== 0 && isSubmit){
             console.log(details);  
         }
+        document.title = "Hotel Flipper"
     },[error]);    
 
     const Reset=details=>{

@@ -1,14 +1,5 @@
 import React from "react"
 import "../css/Header.css"
-// import img from '../pic/hotel.png'
-
-// const bg = [
-//     {
-//         src: '../img/hotel.png',
-//         title: 'bg_hotel',
-//     }
-
-// ];
 
 const Header = () => {
     return (

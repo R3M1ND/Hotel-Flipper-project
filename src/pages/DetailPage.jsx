@@ -2,8 +2,6 @@ import React from "react";
 import "../css/DetailPage.css"
 import ServiceDetail from "../components/serviceDetail"
 import ServiceSelect from "../components/serviceSelect"
-import demoService from "./demoService";
-import listdropdown from "./ServiceDetail.json";
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
@@ -13,7 +11,6 @@ const DetailPage=()=>{
     const[currentList,setCurrentList] = useState([])
     const [isOk,setIsOk] = useState(false)
     const getId = String(window.location.search.replace('?Id=',''))
-    // const getS_type = String(window.location.search.replace('?s_type=',''))
 
     
 
@@ -40,6 +37,7 @@ const DetailPage=()=>{
     useEffect(()=>{
         fetchDetail()
         fetchList()
+        document.title = "Hotel Flipper"
     },[])
     
     const filterList = currentList.filter(item => item.s_type === currentService.s_type)

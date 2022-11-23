@@ -4,11 +4,11 @@ import Form from "react-bootstrap/Form";
 import '../css/ApplyforWorkFormBox.css'
 import document from "../assets/document.svg"
 import cake from "../assets/cake.svg"
+import axios from "axios"
 
 const ApplyforWorkForm = () => {
     const[info,setInfo] = useState({Fname:"",Lname:"",PhoneNum:"",Email:""})
     const[psnAddr,setPsnAddr] = useState({Paddr:"",Palley:"",Pstreet:"",Pdistrict:"",Pcity:"",Pprovince:"",Ppostcode:""})
-    // const[bdate,setBdate] = useState({Bday:"",Bmonth:"",Byear:""})
     const[birthday, setBirthday] = useState("")
     const[formError,setFormError] = useState("")
     const[isSubmit,setIsSubmit] = useState(false)
@@ -17,8 +17,11 @@ const ApplyforWorkForm = () => {
     const handleChange = (e) =>{
         const{name,value} = e.target
         setInfo({...info,[name]:value})
-        setPsnAddr({...psnAddr,[name]:value})}
-        // setBirthday({...birthday,[name]:value})}
+        setPsnAddr({...psnAddr,[name]:value})
+        if(e.target.name==="Birthday"){
+            setBirthday(value)}
+        console.log(e)}
+
 
     const RegforWork = info =>{
         const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -47,7 +50,7 @@ const ApplyforWorkForm = () => {
         
         console.log(psnAddr)
 
-        if (psnAddr.Ppostcode=""){
+        if (psnAddr.Ppostcode==""){
             setNotification("กรุณากรอกรหัสไปรษณีย์")
         }
         else if (!regexPostcode.test(psnAddr.Ppostcode)) {
@@ -84,11 +87,41 @@ const ApplyforWorkForm = () => {
         return errors;
     };
 
+    const EmployeeRegister = async(e) => {
+        const data = {
+            f_name: info.Fname,
+            l_name: info.Lname,
+            tel: info.PhoneNum,
+            email: info.Email,
+            address: psnAddr.Paddr,
+            alley: psnAddr.Palley,
+            street: psnAddr.Pstreet,
+            subdistrict: psnAddr.Pdistrict,
+            district: psnAddr.Pcity,
+            province: psnAddr.Pprovince,
+            postcode: psnAddr.Ppostcode,
+            birth: birthday
+        }
+
+        console.log(data)
+        const res = await axios.post('http://localhost:3004/employee/signup',data)
+        .then(res=>{
+                alert('สมัครงานเรียบร้อย')
+        })
+        .catch(err=>{
+            if(err.response.status===403){
+                alert('สมัครงานไม่สำเร็จ')
+            }
+            console.log('>>>',err)
+        })
+    }
+
     const submitHandler = (e) =>{
         e.preventDefault();
         RegforWork(info);
         AddrforWork(psnAddr);
         checkAge(birthday);
+        EmployeeRegister()
         setFormError(validate(info));
         setIsSubmit(true)
     }
@@ -109,20 +142,6 @@ const ApplyforWorkForm = () => {
     let dateAll = thaiYear + month + day;
     let result = nowYear - parseInt(dataYear);
 
-    // console.log(nowYear)
-    // console.log(dataYear)
-    // console.log(thaiYear)
-    // console.log(month)
-    // console.log(day)
-    // console.log(dateAll)
-    // console.log(result)
-    console.log(birthday)
-
-    let defaultValues ={
-        Birthday: dateAll
-    }
-    
-
     return(
         <div className="BoxFormApply">
             <div>
@@ -136,11 +155,9 @@ const ApplyforWorkForm = () => {
                 <Form className="Form-ApplyWork" onSubmit={submitHandler}>
                     <div className="scale-two-reg">
                         <div className="two-form-reg">
-                            {/* <label> ชื่อจริง* </label> */}
                             <input type="text" placeholder="ชื่อจริง*" name="Fname" id="Fname" value={info.Fname} onChange={handleChange}/>
                         </div>
                         <div className="two-form-reg">
-                            {/* <label> นามสกุล* </label> */}
                             <input type="text" placeholder="นามสกุล*" name="Lname" id="Lname" value={info.Lname} onChange={handleChange}/>
                             <br />
                         </div>
@@ -149,7 +166,6 @@ const ApplyforWorkForm = () => {
 
                     <div className="for-Birthday-form">
                         <div className="for-IMG-Birthday">
-                            {/* <img src={cake} alt="#" height = {40}/> */}
                             <label className="HBD-reg">เดือน/วัน/ปีเกิด</label>
                         </div>
                         <div className="birthday-form-reg">
@@ -159,8 +175,7 @@ const ApplyforWorkForm = () => {
                                 type="date"
                                 placeholder="Select Birthday"
                                 value={birthday}
-                                onChange={(event) => setBirthday(event.target.value)} required/>
-                            {/* <p className="text-red-600">{formError.Birthday}</p> */}
+                                onChange={handleChange}/>
                         </div>
                     </div>
 

@@ -12,7 +12,7 @@ import { useEffect } from "react";
 const CardServiceCovid = (props) => {
     const [isClick, setIsClick] = useState(false)
     const navigate = useNavigate()
-  
+    
     const sendDetail = async(e,getId) => {
         e.preventDefault()
         const res = await axios.get(`http://localhost:3001/api/servicetype/${getId}`)

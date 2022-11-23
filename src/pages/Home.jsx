@@ -33,10 +33,7 @@ import imggeneral2 from "../pic/general2.png";
 
 
 
-const Home = () => {
-    // const {item} = service_props
-    // const[listService,setListService] = useState({img:item.img,text:item.text,describe:item.describe})
-    
+const Home = () => {    
     const data_default_service = []
     const [dataService,setDataService] = useState(data_default_service)
 
@@ -60,6 +57,7 @@ const Home = () => {
     const fetchDetail = async() =>{
         const res = await axios.get('http://localhost:3001/api/service')
         .then(function (res) {
+            //get data for check
             console.log("service ",res)
         })
         
@@ -71,18 +69,16 @@ const Home = () => {
     useEffect(() => {
         fetchData()
         fetchDetail()
+        document.title = "Hotel Flipper"
+        
     },[])
-
-    const sendDataToDetail = (e) => {
-        console.log("data detail >>" ,e)
-    }
-
 
     return (
         <div>
             
             <NavbarHotel />
-            <StickyCart />
+            {localStorage.getItem('h_id') == undefined ? <div></div>: <StickyCart />}
+            
             <Header />
             <div className="box-service-hit">
                 <div className="font-service-hit">บริการยอดฮิตของเรา</div>
@@ -94,7 +90,6 @@ const Home = () => {
                 )}
                 {dataService.filter(item=>item.s_type === "พนักงานรักษาความปลอดภัย").map(item => 
                         {  
-                            // console.log(imgsecure1,item.s_imgPath)
                             return <CardServiceHit  s_imgPath = {item.s_imgPath} s_type = {item.s_type} t_id = {item.t_id}/>
                         }
                 )} 

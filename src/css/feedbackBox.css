@@ -34,3 +34,7 @@
     word-wrap: break-word;
     overflow:hidden;
 }
+.personPos{
+    margin-left: 50px;
+    margin-top: 25px;
+}

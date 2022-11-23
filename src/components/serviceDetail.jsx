@@ -1,16 +1,10 @@
 import React from "react"
-import { useEffect } from "react"
-import { useState } from "react"
 import "../css/serviceDetail.css"
-import axios from 'axios'
-const ServiceDetail =(props)=>{
-   
 
+const ServiceDetail =(props)=>{
     return(
             <div className="detailBox">
                 <div className="service-name">
-                    {/* {serviceName} */}
-                    {/* {isOk ? currentService.s_type : console.log('fail ja') } */}
                     {props.s_type}
                 </div>
 

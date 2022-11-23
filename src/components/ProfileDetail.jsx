@@ -1,5 +1,4 @@
 import React, { useState,useEffect} from "react";
-import { Link } from "react-router-dom";
 import '../css/ProfileDetailBox.css'
 import axios from 'axios'
 
@@ -12,19 +11,29 @@ const ProfileDetail  = (props) =>{
         tel:hdetail.tel })
 
     useEffect(()=>{
-        axios
-        .get('')
+        detailpf()
+    },[])
+
+    const detailpf = async(e) =>{
+        const res = await axios
+        .get(`http://localhost:3004/hotel/${localStorage.getItem('h_id')}`)
         .then(res=>{
-                // setServiceName(res.data)
-                // setServiceScope(res.data)
-                // setServiceCondition(res.data)
-                // setServiceList(res.data)
-            setCurrentHdetail(res.data)
+
+            console.log(res.data)
+        
+            setCurrentHdetail({
+                email: res.data.email,
+                password:  res.data.password,
+                hotelname:  res.data.h_name,
+                tel: res.data.tel
+            })
+            console.log(hdetail)
         })
         .catch(err=>{
             console.log(err)
         })
-    },[])
+
+    }
         
     return(
         <div>
@@ -39,28 +48,22 @@ const ProfileDetail  = (props) =>{
                             ชื่อโรงแรม
                         </div>
                         <div className="Hotel-Name-DT">
-                            {/* โรงแรมซอฟต์แวร์อาร์คิเทกเจอร์นามสมมติ */}
                             {currentHdetail.hotelname}
                         </div>
                         <div className="Hotel-Email">
                             อีเมล
                         </div>
                         <div className="Hotel-Email-DT">
-                            {/* softwareacrch_hotel@gmail.com */}
                             {currentHdetail.email}
                         </div>
                         <div className="Hotel-Tel">
                             เบอร์โทรศัพท์
                         </div>
                         <div className="Hotel-Tel-DT">
-                            {/* 02 123 4567 */}
                             {currentHdetail.tel}
                         </div>
                     </div>
-                    {/* <div className="Line-HotelDT-deco"></div>
-                    <button className="bttn-edit-HetelDT">
-                        แก้ไขข้อมูลโรงแรม
-                    </button> */}
+                 
                     
                 </div>
         </div>
