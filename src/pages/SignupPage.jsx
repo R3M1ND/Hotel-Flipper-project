@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import SignupForm from "../components/SignupForm";
 import '../css/Signup.css';
 import NavbarHotel from "../components/Navbar";
